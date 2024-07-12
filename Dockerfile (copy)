@@ -1,5 +1,7 @@
-FROM python:3.7-alpine
+FROM openjdk:11-jdk-alpine
 
-COPY ola_unicamp.py /
+COPY OlaUnicamp.java /
 
-CMD [ "python", "ola_unicamp.py"]
+RUN javac OlaUnicamp.java
+
+CMD ["java", "OlaUnicamp"]
