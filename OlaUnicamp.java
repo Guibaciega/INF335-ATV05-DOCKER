@@ -1,10 +1,13 @@
-package inf335.br.ic.unicamp;
+package org.example;
 
-public class OlaUnicamp {
-
-	public static void main(String[] args) {
-		System.out.println("Ola_Unicamp");
-
-	}
-
+/**
+ * Hello world!
+ *
+ */
+public class OlaUnicamp
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Olá Unicamp" );
+    }
 }
