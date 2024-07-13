@@ -1,7 +1,8 @@
 FROM openjdk:latest
 
+
 COPY OlaUnicamp.java /
 
 RUN javac OlaUnicamp.java
 
-CMD ["java", "OlaUnicamp"]
+CMD [ "java", "OlaUnicamp.java"]
