@@ -1,19 +1,23 @@
 pipeline {
   agent { label 'linux' }
+
   stages {
     stage('build') {
       steps {
         script {
-          docker.build('ola_unicamp', '-f Dockerfile .')
+          sh '''
+            docker build -t ola_unicamp .
+          '''
         }
       }
     }
+
     stage('run') {
       steps {
         script {
-          docker.image('ola_unicamp').inside('-it --rm') {
-            sh 'java OlaUnicamp'
-          }
+          sh '''
+            docker run --rm ola_unicamp
+          '''
         }
       }
     }
